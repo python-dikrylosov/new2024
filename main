@@ -1,0 +1,9 @@
+import keygen
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import yfinance as yf
+import time
+data_rubx = yf.download("RUBX=",start="2000-01-01",end=time.strftime("%Y-%m-%d"),interval="1d")
+data_f_close = data_rubx.filter(["Close"])
+print(data_f_close)
